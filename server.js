@@ -15,7 +15,7 @@ app.use(express.static("public"));
 // Use file routes for API endpoints
 app.use("/api/files", fileRoutes);
 
-// Use frontend routes for rendering views
+// Use frontend routes for rendering views for frontend
 app.use("/", frontendRoutes);
 
 // Serve the public folder

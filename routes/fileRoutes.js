@@ -8,7 +8,7 @@ const router = express.Router();
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-// File upload route
+// File upload  route
 router.post("/upload", upload.single("file"), fileController.uploadFile);
 
 // File download route

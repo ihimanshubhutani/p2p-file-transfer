@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require("uuid");
 const qrCode = require("qrcode");
 
-// In-memory storage for active connections
+// In-memory storage for active connections in p2p
 const activeConnections = {};
 
 async function uploadFile(req, res) {

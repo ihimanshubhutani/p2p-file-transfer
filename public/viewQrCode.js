@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const fileId = window.location.pathname.split("/").pop();
   const qrCodeContainer = document.getElementById("qrCodeContainer");
 
-  // Make an API call to check if QR code exists
+  // Make an API call to check if QR code exists or not
   fetch(`/api/view-qr-code/${fileId}`)
     .then((response) => {
       if (response.ok) {
