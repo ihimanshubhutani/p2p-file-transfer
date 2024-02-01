@@ -1,0 +1,113 @@
+<!-- views/viewQrCode.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View QR Code</title>
+    <link rel="stylesheet" href="/qrCode.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600&display=swap"
+    />
+  </head>
+  <body>
+    <div id="notificationContainer" class="notification-container">
+      <div id="notification" class="notification">
+        <h2 id="notificationTitle" class="notification-title"></h2>
+        <p id="notificationDescription" class="notification-description"></p>
+      </div>
+    </div>
+    <div class="thumbnail-import">
+      <h1 class="p2p-file-sharing">P2P File Sharing</h1>
+      <section class="p-p-sharing-text">
+        <div class="fourth-frame">
+          <div class="fifth-frame">
+            <div class="sixth-group">
+              <img
+                class="sixth-group-child"
+                loading="eager"
+                alt=""
+                src="/images/Group 15.svg"
+              />
+              <div class="size-indicator">
+                <h2 class="upload-files">QR Code</h2>
+                <div class="select-and-upload">
+                  Share this QR code to download the files.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inner-frame">
+          <div id="qrCodeContainer">
+            <% if (qrCodeDataUrl) { %>
+            <img src="<%= qrCodeDataUrl %>" alt="QR Code" />
+
+            <% } else { %>
+            <p>QR Code not found</p>
+            <% } %>
+          </div>
+
+          <div class="copy-div">
+            <div class="select-and-upload">
+              Copy the shareable link
+            </div>
+            <img
+              src="/images/Copy-outlined-circular-button.svg"
+              alt="Copy Link"
+              onclick="copyDownloadLink('<%= downloadLink %>')"
+              class="copy-icon"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // Add this to your existing JavaScript or modify the existing showNotification function
+      function showNotification(title, description) {
+        const notificationContainer = document.getElementById(
+          "notificationContainer"
+        );
+        const notificationTitle = document.getElementById("notificationTitle");
+        const notificationDescription = document.getElementById(
+          "notificationDescription"
+        );
+
+        // Set title and description
+        notificationTitle.textContent = title;
+        notificationDescription.textContent = description;
+
+        // Show notification
+        notificationContainer.style.display = "block";
+
+        // Hide notification after a certain time (e.g., 3000 milliseconds or 3 seconds)
+        setTimeout(() => {
+          notificationContainer.style.display = "none";
+        }, 3000);
+      }
+
+      //   // Call showNotification when the page loads to initially hide the notification
+      //   document.addEventListener("DOMContentLoaded", () => {
+      //     showNotification("", ""); // Empty title and description to hide the notification
+      //   });
+
+      function copyDownloadLink(downloadUrl) {
+        const textarea = document.createElement("textarea");
+        textarea.value = downloadUrl;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+
+        // Show custom notification
+        showNotification(
+          "Download Link Copied",
+          "The download link has been copied to the clipboard."
+        );
+      }
+    </script>
+  </body>
+</html>

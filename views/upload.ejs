@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P File Sharing</title>
+    <link rel="stylesheet" href="/upload.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600&display=swap">
+</head>
+<body>
+    <div class="thumbnail-import">
+        <h1 class="p2p-file-sharing">P2P File Sharing</h1>
+        <section class="p-p-sharing-text">
+            <div class="inner-frame">
+                <div class="first-frame">
+                    <img class="first-frame-child" loading="eager" alt="" src="/images/Group 3.svg" />
+                    <div class="upload-area" id="dropArea">
+                        <div class="choose-a-file">Choose a file or drag & drop it here</div>
+                        <div class="upload-any-file">Upload any file of any size.</div>
+                    </div>
+                </div>
+                <button class="third-frame">
+                    <label for="fileInput" class="browse-file">Browse File</label>
+                    <input type="file" id="fileInput" style="display: none;" />
+                </button>
+            </div>
+            <div class="fourth-frame">
+                <div class="fifth-frame">
+                    <div class="sixth-group">
+                        <img class="sixth-group-child" loading="eager" alt="" src="/images/Group 15.svg" />
+                        <div class="size-indicator">
+                            <h2 class="upload-files">Upload files</h2>
+                            <div class="select-and-upload">Select and upload the files of your choice</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fileUploadSection" style="display: none;">
+                <div class="seventh-frame">
+                    <div class="eighth-frame">
+                        <div class="google-cert-p-d-f">
+                            <img class="google-cert-p-d-f-child" loading="eager" alt="" src="/images/Group 5.svg" />
+                            <div class="certificate-preview">
+                                <div class="uploaded-filename" id="uploadedFilename"></div>
+                                <div class="completed-tick">
+                                    <div class="uploaded-file-size" id="uploadedFileSize"></div>
+                                    <div class="vue-sax-checkmark">
+                                        <img class="vuesaxboldtick-circle-icon" loading="eager" alt="" src="/images/tick-circle.svg" />
+                                        <div class="completed" id="viewQrCode">Upload Done, Click to view QR Code</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/upload.js"></script>
+</body>
+</html>
