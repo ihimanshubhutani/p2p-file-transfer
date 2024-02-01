@@ -15,6 +15,7 @@ This is a simple peer-to-peer file sharing application built using Node.js, Peer
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) installed on your machine
+  - Compatible Node.js version: v18.17.0
 - [npm (Node Package Manager)](https://www.npmjs.com/get-npm) installed
 
 ### Installation
@@ -22,18 +23,24 @@ This is a simple peer-to-peer file sharing application built using Node.js, Peer
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/bq-praveen-33/p2p-sharing.git
+   cd p2p-sharing
+
+   ```
 
 2. **Install dependencies:**
 
    ```bash
    npm install
 
+   ```
+
 3. **Start the application:**
 
    ```bash
    npm start
+
+   ```
 
 4. **Open your browser and navigate to http://localhost:3000 to use the application.**
 
