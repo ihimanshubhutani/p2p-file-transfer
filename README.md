@@ -44,6 +44,22 @@ This is a simple peer-to-peer file sharing application built using Node.js, Peer
 
 4. **Open your browser and navigate to http://localhost:3000 to use the application.**
 
+## Docker Setup
+
+### Build Docker Image
+
+```bash
+docker build -t blog-editor .
+```
+
+### Run Docker Container
+
+```bash
+docker run -p 3000:3000 blog-editor
+```
+
+**After running the container, open your browser and navigate to http://localhost:3000 to access the application.**
+
 ## Usage
 
 1. Upload a file using the provided interface.
